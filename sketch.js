@@ -7,9 +7,7 @@
 *
 ***************************************************************************************/
 
-//snowflakiness created with out planning or comment. Best in full screen
-//mouse controls rotation and time
-//click to overlay random color filter
+//variables
 let two;
 let temps = 0;
 let oldtemps = 0;
@@ -36,7 +34,7 @@ function draw() {
   translate(width / 2, height / 2);
   mouseCont();
   flaking();
-
+//timer
   if (frameCount % 60 == 0 && timer > 0) {
     // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer--;
@@ -53,11 +51,11 @@ function draw() {
     button.position(425, height/2);
     button.mousePressed(function goToAnotherPage() {
       window.location.href =
-        "https://editor.p5js.org/natashatan/sketches/gxSMDJpDT";
+        "https://tashatan1.github.io/let-s-breath/";
     });
   }
 }
-
+//animation of visual - flake effect
 function flaking() {
   if ((temps > 0 && temps < 0.1) || temps > 199) {
     r = 2;
@@ -138,6 +136,7 @@ function hexS(p) {
   endShape();
 }
 function mousePressed() {
+  //change background
   background(
     355 * sin(frameCount / 200),
     255 * sin(frameCount / 200),
