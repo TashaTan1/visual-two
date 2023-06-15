@@ -13,7 +13,7 @@ let temps = 0;
 let oldtemps = 0;
 let r = 0;
 let varRand = 0;
-let timer = 5;
+let timer = 20;
 let button;
 
 function preload() {
@@ -41,11 +41,11 @@ function draw() {
   }
   //  console.log(timer);
   if (timer == 0) {
-    button = createButton("Carry on Listening");
+    button = createButton("Back to Frequencies");
     button.position((width/2) -200, height/2);
     button.mousePressed(function goToAnotherPage() {
       window.location.href =
-        "https://tashatan1.github.io/visual-two/";
+        "https://tashatan1.github.io/front-page-/";
     });
     button = createButton("Let's Breath");
     button.position((width/2) +80, height/2);
